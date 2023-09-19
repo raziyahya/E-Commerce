@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up</title>
+  <!-- Include Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h4>Create new account</h4>
+        </div>
+        <div class="card-body">
+          <form action="/signup" method="post">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" placeholder="Enter Name" id="name" name="Name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" class="form-control"placeholder="Enter Email Address" id="email" name="Email" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" placeholder="Enter Password" id="password" name="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+          </form>
+        </div>
+        <div class="card-footer">
+          <p>Already have an account? <a href="/login">Log in here</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

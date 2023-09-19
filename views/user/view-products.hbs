@@ -1,0 +1,40 @@
+
+
+  
+    <section>
+        <div class="container mt-5">
+            <form class="form-inline" style="    margin-left: 818px;
+    margin-bottom: 12px;
+    margin-top: -41px;
+}">
+                    <div class="form-group mb-2">
+                        <label for="search" class="sr-only">Search</label>
+                        <input type="text" class="form-control" id="search" placeholder="Search for products">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Search</button>
+                </form>
+            <div class="row">
+                {{#each products}}
+
+                <div class="col-md-3 p-3">
+                    <div class="card" style="width: 15rem; height:25rem">
+                        <img class="card-img-top"
+                            src="/product-images/{{this._id}}.jpg"
+                            alt="Card image cap"
+                            style="height: 12rem">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.Name}}</h5>
+                            <p class="text-default">Rs.{{this.Price}}</p>
+                            <p class="card-text ">{{this.Description}}</p>
+                            {{!-- <a href="/add-to-cart/{{this._id}}"  class="btn btn-primary">Add to cart</a> --}}
+                            <button onclick="addToCart('{{this._id}}')" class="btn btn-primary">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                 {{/each}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
